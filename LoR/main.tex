@@ -1,0 +1,66 @@
+\documentclass[12pt, a4paper]{letter}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{eso-pic}
+\usepackage[export]{adjustbox}
+\usepackage{xcolor}
+\usepackage{ragged2e}
+\usepackage{microtype}
+\usepackage{setspace}
+
+\hypersetup{hidelinks}
+\geometry{top=0.7in, bottom=1in, left=1in, right=1in}
+
+\justifying
+\setstretch{1.15}
+
+\tolerance=400
+\emergencystretch=2em
+\hyphenpenalty=1000
+
+\begin{document}
+
+    \thispagestyle{empty}
+
+    \begin{minipage}{0.4\textwidth}
+        \includegraphics[width=2.5in]{pic/psut.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.55\textwidth}
+        \raggedleft
+        \small{ 
+            King Abdullah II School of Engineering\\
+            Princess Sumaya University for Technology\\
+            Khalil Al-Saket St, Amman\\
+            P.O. Box 1438 Amman, Jordan\\
+        }
+    \end{minipage}
+
+    \vspace{0.4in}
+
+    \begin{flushright}
+        December 29, 2024
+    \end{flushright}
+
+    \textbf{To Whom It May Concern,}
+
+    \vspace{0.2in}
+
+    \input{letterContent}
+
+    \vspace{0.2in}
+
+    Please feel free to contact me for any further information.
+
+    \vspace{0.2in}
+
+    \includegraphics[width=1.6in]{pic/signature.png} 
+
+    Name, Lecturer \\
+    Department of  Dept. Name\\
+    King Abdullah II School of Engineering \\
+    Princess Sumaya University for Technology \\ 
+    Email: \href{mailto:name@psut.edu.jo}{name@psut.edu.jo} \\
+
+\end{document}
