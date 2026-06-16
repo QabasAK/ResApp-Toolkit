@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in, headsep=18pt,]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{soul}
+\newcommand{\statement}[1]{\medskip\noindent
+  \textcolor{black}{\textbf{#1}}\space
+}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{
+\textsc{\soptitle}\hfill\footnotesize
+\textbf{\yourname}\\
+\school\hfill\yourintent}
+\fancyfoot[C]{\footnotesize\thepage}
+\let\oldcenter\center
+\let\oldendcenter\endcenter
+\renewenvironment{center}{\setlength\topsep{0pt}\oldcenter}{\oldendcenter}
+\newcommand{\wordcount}{
+\begin{center}
+\rule{0.75\textwidth}{.4pt}\\
+{\footnotesize A statement of \numwords \ words}
+\end{center}
+}
+\newif\ifcomments
+\newcommand{\comment}[1]{}
+\newcommand{\todo}[1]{\ifcomments\textcolor{red}{TODO: #1}\fi}
+
+%%%%%%%%%%%%%%%%%%%%% Edit this section %%%%%%%%%%%%%%%%%%%%
+
+\commentstrue
+
+\sethlcolor{yellow}
+\newcommand{\placeholder}[1]{\colorbox{yellow}{#1}}
+
+% remove the placeholder command such that it looks like this:
+% \newcommand{\yourname}{Full Name}
+
+% the command is there to draw your attention to what you need to change in the header
+
+\newcommand{\soptitle}{Statement of Purpose}
+\newcommand{\yourname}{\placeholder{Full Name}}
+\newcommand{\yourintent}{\placeholder{Purpose}}
+\newcommand{\school}{\placeholder{University Name}}
+
+\newcommand{\advisorfirstname}{}
+\newcommand{\advisorlastname}{}
+\newcommand{\advisorfull}{Prof. \advisorfirstname\ \advisorlastname}
+\newcommand{\advisor}{Prof. \advisorlastname}
+\newcommand{\numwords}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[
+  breaklinks,
+  pdftitle={\yourname - \soptitle},
+  pdfauthor={\yourname},
+  unicode,
+  colorlinks,
+  urlcolor={blue!80!black}
+]{hyperref}
+
+\begin{document}
+
+\statement{Academic Background} 
+
+\hl{Talk about courses, gpa, rank (if high) or any relevant academic info}
+
+\vspace{0.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\statement{Research Experience}
+
+\hl{Talk about any "research" background: did you work as a research assistant? do you have any publications?}
+
+\vspace{0.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\statement{Leadership and Outreach}
+
+\hl{Talk about clubs, volunteering, events you did, workshops or any initiative you believe could distinguish you}
+
+\vspace{0.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% make sure to update the lab name to either the professor's group or the university
+\statement{Motivation to Join \hl{[Lab Name]}}
+
+\hl{Talk about why you want to join that lab specifically: interesting topic? interesting tool? a specific unique use case? where do you believe you can add value?}
+
+\end{document}
+
+%%%%% GOOD LUCK :) %%%%%
