@@ -1,1 +1,1 @@
-# ColdEmail-Toolkit
+# Research Applications Toolkit
